@@ -39,3 +39,11 @@ map <silent> <F9> :tabn<CR>
 map T :TaskList<CR>
 map L :TlistToggle<CR>
 
+
+" --- Pathogen plugin manager (by Tim Pope) ---
+call pathogen#infect()
+
+
+" --- Filetype plugin
+filetype plugin on
+
