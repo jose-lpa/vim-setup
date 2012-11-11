@@ -1,3 +1,7 @@
+" --- Pathogen plugin manager (by Tim Pope) ---
+call pathogen#infect()
+
+
 " --- Basic functionalities
 set ruler
 set number
@@ -7,6 +11,12 @@ set nocompatible
 " --- Syntax highlighting ---
 syntax enable
 set background=dark
+
+if !has('gui_running')
+    let g:solarized_termcolors=256
+endif
+
+colorscheme solarized
 
 
 " --- Indentation options ---
@@ -38,10 +48,6 @@ map <silent> <F9> :tabn<CR>
 
 map T :TaskList<CR>
 map L :TlistToggle<CR>
-
-
-" --- Pathogen plugin manager (by Tim Pope) ---
-call pathogen#infect()
 
 
 " --- Filetype plugin
