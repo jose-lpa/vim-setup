@@ -1,5 +1,6 @@
 " --- Pathogen plugin manager (by Tim Pope) ---
 call pathogen#infect()
+call pathogen#helptags()
 
 
 " --- Basic functionalities
