@@ -40,15 +40,24 @@ set foldmethod=indent
 set foldlevel=99
 
 
-" --- Key mapping
+" --- General key mapping
 
 " Tab navigation mapping. You can now press F8 to change to the left tab and
 " F9 to change to the right tab.
 map <silent> <F8> :tabp<CR>
 map <silent> <F9> :tabn<CR>
 
-map T :TaskList<CR>
-map L :TlistToggle<CR>
+
+" --- NERDTree configuration
+
+" Automatically load NERDTree when Vim starts without any loaded file.
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Close Vim if the only opened window is NERDTree.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Map 'Ctrl+n' to open NERDTree.
+map <C-n> :NERDTreeToggle<CR>
 
 
 " --- Filetype plugin
