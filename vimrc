@@ -47,6 +47,9 @@ set foldlevel=99
 map <silent> <F8> :tabp<CR>
 map <silent> <F9> :tabn<CR>
 
+" Tagbar plugin activation.
+map <C-t> :TagbarToggle<CR>
+
 
 " --- NERDTree configuration
 
